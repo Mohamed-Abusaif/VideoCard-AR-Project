@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raspberry Pi</title>
+    <!-- Add Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+      }
+      .container {
+        position: relative;
+        
+      }
+      .centered {
+        position: absolute;
+        margin-top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+      }
+      .centered button {
+        margin-bottom: 10px;
+        border-color: #007bff;
+      }
+      .centered img {
+        margin: 20px 0;
+        max-width: 100%;
+        max-height: 300px;
+      }
+
+      .container.border {
+        border: 2px solid #007bff;
+        padding: 20px;
+        margin-bottom: 20px; /* Add margin to create space */
+        text-align: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      #logo {
+        display: block;
+        margin: 10px auto;
+        max-width: 15%;
+        height: auto;
+      }
+
+      #objectImage {
+        max-width: 50%;
+        max-height: 50%;
+      }
+      .btn:hover{
+        background-color: azure ;
+        color:#0275d8;
+      }
+    </style>
+  </head>
+  <body>
+    
+
+    <div class="container border pt-3 mt-5" style="border: 5px solid #0275d8;">
+      <img id="logo" src="assets\Logo.jpg" alt="Logo"  class="pb-2 image-fluid"/>
+      <h1 style="color: #0275d8;"> Video Card </h1>
+      <p style="color: gray; text-align: left;" class="pt-3 pb-3 container">
+        The Voodoo 5 was the last and most powerful graphics card line that 3dfx Interactive released. All members of the family were based upon the VSA-100 graphics processor.[1] Only the single-chip Voodoo 4 4500 and dual-chip Voodoo 5 5500 made it to market.</br>
+        The VSA-100 graphics chip is a direct descendant of "Avenger", more commonly known as Voodoo3. It was built on a 250 nm semiconductor manufacturing process, as with Voodoo3. However, the process was tweaked with a sixth metal layer to allow for better density and speed, and the transistors have a slightly shorter gate length and thinner gate oxide. VSA-100 has a transistor count of roughly 14 million, compared to Voodoo3's ~8 million. The chip has a larger texture cache than its predecessors and the data paths are 32 bits wide rather than 16-bit. Rendering calculations are 40 bits wide in VSA-100 but the operands and results are stored as 32-bit
+      </p>
+      <img id="objectImage" src="assets/image.png" alt="VideoCard " class="image-fluid" /><br><br>
+      <!-- <div class="centered"> -->
+        <a href="model page.html" target="_blank">
+          <button type="button" class="btn btn-primary">
+            Learn From 3d Model!
+          </button>
+        </a><br>
+
+        <audio id="audioPlayer" >
+          <source src="assets/video card.m4a" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+
+        <button type="button" class="btn btn-primary mt-3 mb-3" onclick="playAudio()" ondblclick="stop()" > 
+          Play Audio For Illustration!
+        </button><br>
+
+        <a href="https://en.wikipedia.org/wiki/Voodoo_5" target="_blank">
+          <button type="button" class="btn btn-primary">
+            Additional Resources
+          </button>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Add Bootstrap JS -->
+    <script>
+      function playAudio() {
+        var audioPlayer = document.getElementById("audioPlayer");
+        audioPlayer.play();
+      }
+      function stop() {
+        document.getElementById('audioPlayer').pause();
+        return false;
+      }
+     
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
